@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AcademicWeek</string>
+    <string name="settings">Настройки</string>
+    <string name="settings_description">Открыть настройки</string>
+    <string name="top_week_text">Сейчас</string>
+    <string name="bottom_week_text">Академическая неделя</string>
+    <string name="counting_from">Считая с %1$d.%2$d</string>
+    <string name="calendar">Календарь</string>
+    <string name="count_date">Дата отсчёта</string>
+    <string name="count_date_not_specified">Дата отсчёта не указана</string>
+    <string name="week_not_started">Неделя ещё не началась</string>
+    <string name="select_count_date">Укажите дату отсчёта</string>
+    <string name="count_date_summary">Выберите дату отсчёта академической недели</string>
+    <string name="general_settings">Основные</string>
+    <string name="applied_count_date">Дата отсчёта применена</string>
+    <string name="widget_description">Стандартный виджет AcademicWeek</string>
+    <string name="configure">Настроить</string>
+    <string name="add_widget">Добавить виджет</string>
+    <string name="app_widget_description">AcademicWeek у вас на главном экране</string>
+    <string name="error">Ошибка</string>
+    <string name="widget_bottom_week_text">Неделя</string>
+</resources>

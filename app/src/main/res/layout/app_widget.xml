@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.AcademicWeek.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:theme="@style/Theme.AcademicWeek.AppWidgetContainer">
+
+    <LinearLayout
+        android:id="@+id/widgetLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        style="@style/Widget.AcademicWeek.AppWidget.InnerView">
+        <TextView
+            android:id="@+id/widgetWeekTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            tools:text="22" />
+        <TextView
+            android:id="@+id/widgetBottomWeekTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="@string/widget_bottom_week_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/widgetErrorTextView"
+        style="@style/Widget.AcademicWeek.AppWidget.InnerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:text="@string/error"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</RelativeLayout>
