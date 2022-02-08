@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -17,9 +18,10 @@
             android:id="@+id/mainAppBar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
+            android:background="@color/green_500"
             app:menu="@menu/main_app_bar"
             app:title="@string/app_name"
-            style="@style/Widget.MaterialComponents.Toolbar.Surface" />
+            app:titleTextColor="#FFFFFFFF" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <ImageView

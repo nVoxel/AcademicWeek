@@ -1,8 +1,6 @@
 package com.voxeldev.academicweek.models
 
 import android.content.Context
-import android.util.Log
-import androidx.preference.PreferenceManager
 import com.voxeldev.academicweek.R
 import java.time.DayOfWeek
 import java.time.LocalDateTime

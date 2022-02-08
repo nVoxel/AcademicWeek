@@ -1,4 +1,6 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <PreferenceCategory
         app:title="@string/general_settings">
@@ -8,5 +10,16 @@
             app:title="@string/count_date"
             app:summary="@string/count_date_summary"
             app:icon="@drawable/ic_calendar" />
+
+        <ListPreference
+            android:key="theme"
+            android:title="@string/theme"
+            android:summary="@string/select_theme"
+            android:icon="@drawable/ic_theme"
+            android:defaultValue="@string/system_default"
+            android:entries="@array/themes"
+            android:entryValues="@array/themes_values"
+            android:dialogTitle="@string/select_theme"
+            android:negativeButtonText="" />
     </PreferenceCategory>
 </PreferenceScreen>

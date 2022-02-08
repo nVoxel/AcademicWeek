@@ -27,10 +27,12 @@
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".ui.SettingsActivity"
             android:exported="false"
             android:label="@string/settings" />
+
         <activity
             android:name=".ui.MainActivity"
             android:exported="true" >

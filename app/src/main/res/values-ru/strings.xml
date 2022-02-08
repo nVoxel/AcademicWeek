@@ -12,6 +12,11 @@
     <string name="week_not_started">Неделя ещё не началась</string>
     <string name="select_count_date">Укажите дату отсчёта</string>
     <string name="count_date_summary">Выберите дату отсчёта академической недели</string>
+    <string name="theme">Тема</string>
+    <string name="select_theme">Выберите тему</string>
+    <string name="system_default">По умолчанию</string>
+    <string name="light">Светлая</string>
+    <string name="dark">Тёмная</string>
     <string name="general_settings">Основные</string>
     <string name="applied_count_date">Дата отсчёта применена</string>
     <string name="widget_description">Стандартный виджет AcademicWeek</string>
@@ -19,5 +24,4 @@
     <string name="add_widget">Добавить виджет</string>
     <string name="app_widget_description">AcademicWeek у вас на главном экране</string>
     <string name="error">Ошибка</string>
-    <string name="widget_bottom_week_text">Неделя</string>
 </resources>

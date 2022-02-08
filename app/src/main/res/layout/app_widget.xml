@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="26sp"
+            android:textSize="50sp"
             tools:text="22" />
         <TextView
             android:id="@+id/widgetBottomWeekTextView"
@@ -29,7 +29,7 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:text="@string/widget_bottom_week_text" />
+            android:text="@string/bottom_week_text" />
     </LinearLayout>
 
     <TextView

@@ -4,7 +4,7 @@
     android:description="@string/app_widget_description"
     android:initialLayout="@layout/app_widget"
     android:minWidth="100dp"
-    android:minHeight="40dp"
+    android:minHeight="70dp"
     android:previewImage="@drawable/app_widget_preview"
     android:resizeMode="horizontal|vertical"
     android:updatePeriodMillis="21600000"

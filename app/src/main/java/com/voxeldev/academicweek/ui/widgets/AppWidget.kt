@@ -5,13 +5,11 @@ import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
 import com.voxeldev.academicweek.R
 import com.voxeldev.academicweek.models.AcademicWeekCalculator
 import com.voxeldev.academicweek.ui.MainActivity
-import java.lang.Exception
 
 class AppWidget : AppWidgetProvider() {
     override fun onUpdate(

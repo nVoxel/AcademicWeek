@@ -11,6 +11,11 @@
     <string name="week_not_started">The week hasn\'t started yet</string>
     <string name="select_count_date">Specify Count Date</string>
     <string name="count_date_summary">Set academic week count date</string>
+    <string name="theme">Theme</string>
+    <string name="select_theme">Choose UI theme</string>
+    <string name="system_default">System default</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
     <string name="general_settings">General</string>
     <string name="applied_count_date">Count date applied</string>
     <string name="widget_description">Default AcademicWeek widget</string>
@@ -18,5 +23,4 @@
     <string name="add_widget">Add widget</string>
     <string name="app_widget_description">AcademicWeek on your home screen</string>
     <string name="error">Error</string>
-    <string name="widget_bottom_week_text">Week</string>
 </resources>

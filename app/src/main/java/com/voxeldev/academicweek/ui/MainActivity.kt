@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View.GONE
 import android.view.View.VISIBLE
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.preference.PreferenceManager
 import com.google.android.material.appbar.MaterialToolbar
@@ -59,6 +60,17 @@ class MainActivity : AppCompatActivity() {
         weekTextView?.text = academicWeek?.week?.toString()
         countingTextView?.text = academicWeek?.countingFrom
         toggleError(false)
+    }
+
+    companion object {
+        fun setTheme(theme : String) {
+            when (theme) {
+                "light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                "dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                else -> AppCompatDelegate.setDefaultNightMode(
+                    AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            }
+        }
     }
 
     private fun toggleError(error: Boolean) {
