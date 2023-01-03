@@ -4,14 +4,17 @@
     <string name="settings">Настройки</string>
     <string name="settings_description">Открыть настройки</string>
     <string name="top_week_text">Сейчас</string>
-    <string name="bottom_week_text">Академическая неделя</string>
+    <string name="bottom_week_text">Учебная неделя</string>
+    <string name="week_text">%1$d / %2$d</string>
     <string name="counting_from">Считая с %1$d.%2$d</string>
+    <string name="counting_until">До %1$d.%2$d</string>
     <string name="calendar">Календарь</string>
     <string name="count_date">Дата отсчёта</string>
     <string name="count_date_not_specified">Дата отсчёта не указана</string>
-    <string name="week_not_started">Неделя ещё не началась</string>
-    <string name="select_count_date">Укажите дату отсчёта</string>
-    <string name="count_date_summary">Выберите дату отсчёта академической недели</string>
+    <string name="week_not_started">Учёба ещё не началась</string>
+    <string name="study_is_over">Учёба закончилась</string>
+    <string name="select_count_date">Укажите даты начала и конца</string>
+    <string name="count_date_summary">Выберите даты отсчёта академической недели</string>
     <string name="theme">Тема</string>
     <string name="select_theme">Выберите тему</string>
     <string name="system_default">По умолчанию</string>
@@ -24,4 +27,10 @@
     <string name="add_widget">Добавить виджет</string>
     <string name="app_widget_description">AcademicWeek у вас на главном экране</string>
     <string name="error">Ошибка</string>
+    <string name="selection_hint">Выберите первый и последний дни учёбы</string>
+    <string name="configure_widget">Настройка виджета</string>
+    <string name="set_count_dates">Настроить даты отсчёта</string>
+    <string name="display_total_weeks_count">Отображать количество недель</string>
+    <string name="continue_widget">Продолжить</string>
+    <string name="select_count_dates_error">Выберите даты отсчёта чтобы продолжить</string>
 </resources>

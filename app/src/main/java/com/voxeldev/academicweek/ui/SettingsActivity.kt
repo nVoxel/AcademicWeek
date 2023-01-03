@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.util.Pair
 import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
@@ -31,7 +32,7 @@ class SettingsActivity : AppCompatActivity() {
                 .commit()
         }
 
-        findViewById<MaterialToolbar>(R.id.settingsAppBar).setNavigationOnClickListener{
+        findViewById<MaterialToolbar>(R.id.settingsAppBar).setNavigationOnClickListener {
             finish()
         }
     }
@@ -45,13 +46,27 @@ class SettingsActivity : AppCompatActivity() {
                 PreferenceManager.getDefaultSharedPreferences(requireContext())
 
             findPreference<Preference>("countStart")?.setOnPreferenceClickListener {
-                MaterialDatePicker.Builder.datePicker()
+                Toast.makeText(
+                    requireContext(),
+                    R.string.selection_hint,
+                    Toast.LENGTH_LONG
+                ).show()
+
+                MaterialDatePicker.Builder
+                    .dateRangePicker()
                     .setTitleText(R.string.select_count_date)
                     .setSelection(
-                        TimeUnit.SECONDS.toMillis(
-                            sharedPreferences.getLong(
-                                "countStart",
-                                LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)
+                        Pair(
+                            TimeUnit.SECONDS.toMillis(
+                                sharedPreferences.getLong(
+                                    "countStart",
+                                    LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)
+                                )
+                            ), TimeUnit.SECONDS.toMillis(
+                                sharedPreferences.getLong(
+                                    "countEnd",
+                                    LocalDateTime.now().toEpochSecond(ZoneOffset.UTC)
+                                )
                             )
                         )
                     )
@@ -61,7 +76,11 @@ class SettingsActivity : AppCompatActivity() {
                             with(sharedPreferences.edit()) {
                                 putLong(
                                     "countStart",
-                                    TimeUnit.MILLISECONDS.toSeconds(selection!!)
+                                    TimeUnit.MILLISECONDS.toSeconds(selection!!.first)
+                                )
+                                putLong(
+                                    "countEnd",
+                                    TimeUnit.MILLISECONDS.toSeconds(selection!!.second)
                                 )
                                 apply()
                                 Toast.makeText(

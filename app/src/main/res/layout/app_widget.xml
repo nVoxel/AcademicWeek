@@ -8,28 +8,30 @@
 
     <LinearLayout
         android:id="@+id/widgetLinearLayout"
+        style="@style/Widget.AcademicWeek.AppWidget.InnerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:orientation="vertical"
-        style="@style/Widget.AcademicWeek.AppWidget.InnerView">
+        android:orientation="vertical">
+
         <TextView
             android:id="@+id/widgetWeekTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="50sp"
-            tools:text="22" />
+            android:textSize="45sp"
+            tools:text="22 / 25" />
+
         <TextView
             android:id="@+id/widgetBottomWeekTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/bottom_week_text"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:text="@string/bottom_week_text" />
+            android:textSize="18sp" />
     </LinearLayout>
 
     <TextView
@@ -38,10 +40,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:gravity="center"
         android:layout_margin="8dp"
+        android:gravity="center"
         android:text="@string/error"
-        android:visibility="gone"
         android:textColor="@color/white"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:visibility="gone" />
 </RelativeLayout>

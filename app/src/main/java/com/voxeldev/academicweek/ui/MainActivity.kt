@@ -16,11 +16,12 @@ import com.voxeldev.academicweek.models.AcademicWeekCalculator
 
 class MainActivity : AppCompatActivity() {
 
-    private var academicWeekCalculator : AcademicWeekCalculator? = null
-    private var weekConstraintLayout : ConstraintLayout? = null
-    private var weekTextView : MaterialTextView? = null
-    private var countingTextView : MaterialTextView? = null
-    private var errorTextView : MaterialTextView? = null
+    private var academicWeekCalculator: AcademicWeekCalculator? = null
+    private var weekConstraintLayout: ConstraintLayout? = null
+    private var weekTextView: MaterialTextView? = null
+    private var countingFromTextView: MaterialTextView? = null
+    private var countingUntilTextView: MaterialTextView? = null
+    private var errorTextView: MaterialTextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +37,8 @@ class MainActivity : AppCompatActivity() {
 
         weekConstraintLayout = findViewById(R.id.weekConstraintLayout)
         weekTextView = findViewById(R.id.weekTextView)
-        countingTextView = findViewById(R.id.countingTextView)
+        countingFromTextView = findViewById(R.id.countingFromTextView)
+        countingUntilTextView = findViewById(R.id.countingUntilTextView)
         errorTextView = findViewById(R.id.errorTextView)
     }
 
@@ -48,27 +50,33 @@ class MainActivity : AppCompatActivity() {
         try {
             val sharedPreferences = PreferenceManager
                 .getDefaultSharedPreferences(applicationContext)
-            val countStart : Long = sharedPreferences.getLong("countStart", -1L)
-            academicWeek = academicWeekCalculator?.calculateWeek(countStart)
-        }
-        catch (e : Exception) {
-            errorTextView?.setText(e.message)
+            val countStart: Long = sharedPreferences.getLong("countStart", -1L)
+            val countEnd: Long = sharedPreferences.getLong("countEnd", -1L)
+            academicWeek = academicWeekCalculator?.calculateWeek(countStart, countEnd)
+        } catch (e: Exception) {
+            errorTextView?.text = e.message
             toggleError(true)
             return
         }
 
-        weekTextView?.text = academicWeek?.week?.toString()
-        countingTextView?.text = academicWeek?.countingFrom
+        weekTextView?.text = getString(
+            R.string.week_text,
+            academicWeek?.week,
+            academicWeek?.totalWeeks
+        )
+        countingFromTextView?.text = academicWeek?.countingFrom
+        countingUntilTextView?.text = academicWeek?.countingUntil
         toggleError(false)
     }
 
     companion object {
-        fun setTheme(theme : String) {
+        fun setTheme(theme: String) {
             when (theme) {
                 "light" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
                 "dark" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
                 else -> AppCompatDelegate.setDefaultNightMode(
-                    AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+                    AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+                )
             }
         }
     }
