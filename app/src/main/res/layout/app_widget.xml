@@ -11,6 +11,7 @@
         style="@style/Widget.AcademicWeek.AppWidget.InnerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/widget_background"
         android:layout_centerInParent="true"
         android:gravity="center"
         android:orientation="vertical">
@@ -20,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="#FFFFFFFF"
             android:textSize="45sp"
             tools:text="22 / 25" />
 
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bottom_week_text"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="#FFFFFFFF"
             android:textSize="18sp" />
     </LinearLayout>
 

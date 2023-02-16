@@ -107,6 +107,21 @@ class AppWidgetConfigureActivity : AppCompatActivity() {
             finish()
             return
         }
+
+        if (icicle != null) {
+            isDateSelected = icicle.getBoolean(KEY_IS_DATE_SELECTED, false)
+
+            if (isDateSelected) {
+                val resultValue = Intent()
+                resultValue.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
+                setResult(RESULT_OK, resultValue)
+            }
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putBoolean(KEY_IS_DATE_SELECTED, isDateSelected)
+        super.onSaveInstanceState(outState)
     }
 }
 
@@ -114,6 +129,7 @@ private const val PREFS_NAME = "com.voxeldev.academicweek.AppWidget"
 private const val PREF_START_PREFIX_KEY = "appwidget_start_"
 private const val PREF_END_PREFIX_KEY = "appwidget_end_"
 private const val PREF_TOTAL_WEEKS_PREFIX_KEY = "appwidget_total_weeks"
+private const val KEY_IS_DATE_SELECTED = "isDateSelected"
 
 internal fun saveDatePref(context: Context, appWidgetId: Int, date: Pair<Long, Long>) {
     val prefs = context.getSharedPreferences(PREFS_NAME, 0).edit()
